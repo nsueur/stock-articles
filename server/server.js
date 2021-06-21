@@ -73,7 +73,6 @@ app.put('/api/update', (req, res) => {
     const quantity = req.body.quantity
     const description = req.body.description
     const unit_price = req.body.unit_price
-    console.log(req)
     db.query(
         "UPDATE articles SET name = ?, category = ?, quantity = ?, description = ?, unit_price = ? WHERE id = ?",
          [name, category, quantity, description, unit_price, id],
